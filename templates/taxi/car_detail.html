@@ -2,7 +2,8 @@
 {% block content %}
 <h1>{{ object.manufacturer.name }} {{ object.manufacturer.country }}</h1>
 
-<h2>driver list:</h2>
+<h2>Driver list:</h2>
+{{cars.first_name}}
   <ul>
   {% for driver in object.drivers.all %}
   <li>

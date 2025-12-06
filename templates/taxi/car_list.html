@@ -1,0 +1,10 @@
+{% extends "base.html"%}
+{% block content %}
+  <ul>
+  {% for obj in object_list%}
+  <li>
+    <p><a href="{% url 'taxi:car_detail' obj.id %}">{{ obj.id }}.</a> {{ obj.model }}, {{ obj.manufacturer.name }}, {{ obj.driver.username }}</p>
+  </li>
+  {% endfor %}
+  <ul>
+{% endblock %}
